@@ -23,14 +23,10 @@ angular.module('myApp', ['ui.utils'])
 
 Each directive and filter is now it's own module and will have a relevant README.md in their respective folders
 
-## Development
-
-At this time, we do not have a build script. You must include all `.js` files you wish to work on.
-We will likely be adding a `Gruntfile.js` in the near future for this
-
 ### Requirements
 
 0. Install [Node.js](http://nodejs.org/) and NPM (should come with)
+   If you already have Node.js and NPM, make sure they are up to date.
 
 1. Install global dependencies `grunt-cli`, `bower`, and `karma`:
 
@@ -44,6 +40,27 @@ We will likely be adding a `Gruntfile.js` in the near future for this
     $ npm install
     $ bower install
     ```
+
+Make sure the grunt packages are installed: 
+
+```bash
+$ npm install grunt-contrib-uglify
+$ npm install grunt-contrib-watch
+$ npm install grunt-contrib-concat
+$ npm install grunt-contrib-clean
+$ npm install grunt-contrib-jshint
+$ npm install grunt-contrib-copy
+$ npm install grunt-karma
+$ npm install grunt
+```
+
+### Building
+
+
+A "gruntFile.js" is available for building a combined script of all the modules in components/angular-ui-docs/build/ui-utils.js
+Minified and versions with IEShiv are also included. 
+
+_The myfork.master branch in this repo has been hacked to symlink ./dist to components/angular-ui-docs/build._
 
 ### Running Tests
 
